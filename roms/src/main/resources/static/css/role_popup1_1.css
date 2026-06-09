@@ -1,0 +1,128 @@
+:root{
+    --basic_green--: #2ecc71;
+}
+.page-content{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.page-content.inactive {
+    filter: brightness(0.4);
+    pointer-events: none;
+}
+
+
+.blur-overlay.active {
+    background: rgba(0, 0, 0, 0.25);
+    pointer-events: auto;
+}
+
+.openPopup{
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-weight: 700;
+    font-size: 32px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: var(--basic_green--);
+    box-shadow: 10px 10px 20px rgb(49, 49, 49);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.openPopup:hover{
+    transform: translate(3px,-5px) scale(1.1);
+    border: 1px solid var(--basic_green--);
+    color: var(--basic_green--);
+    background-color: white;
+}
+
+/* popup container */
+.popup {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 500px;
+    padding: 25px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 3;
+}
+
+/* show popup */
+.popup.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup h2{
+    width: 70%;
+    margin: auto;
+    color: white;
+    font-size: 28px;
+    /* background-color: #e2ece7; */
+}
+
+.popup-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.role-btn {
+    width: 200px;
+    height: 200px;
+    padding: 16px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    color: var(--basic_green--);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border: 3px solid var(--basic_green--);
+    transition: 0.3s;
+}
+.role-btn:hover{
+    transform: translate(3px,-5px) scale(1.05);
+}
+.role-btn .profile_pt{
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--basic_green--);
+    margin: 8px;
+}
+.role-btn img{
+    width: 100px;
+    height: auto;
+}
+.role_text{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background: darkred;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgb(49, 49, 49);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.close-btn:hover{
+    background-color: red;
+    /* color: red; */
+}

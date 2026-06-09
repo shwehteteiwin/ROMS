@@ -1,0 +1,179 @@
+.reservation-card{
+    z-index: 2;
+    width:330px;
+    padding:25px;
+    border-radius:16px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    color:white;
+}
+
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:var(--base-color--);
+}
+
+
+.input-group{
+    margin-bottom:12px;
+}
+.nn{
+    width: 96%;
+    height: 25px;
+    
+}
+
+label{
+    display:block;
+    font-size:14px;
+    margin-bottom:5px;
+    color:#31a376;
+}
+
+input, select{
+    width:100%;
+    padding:8px;
+    border-radius:6px;
+    border:none;
+    outline:none;
+    background: rgba(255,255,255,0.85);
+    font-size:14px;
+}
+
+.reserve-btn{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:var(--profile-text-color--);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.reserve-btn:hover{
+    background: var(--base-color--);
+    transform:scale(1.05);
+}
+
+.time-label {
+    margin-top: 15px;
+}
+
+.time-picker {
+    display: flex;
+    gap: 10px; 
+    margin-bottom: 10px;
+    justify-content: center;  
+    align-items: center;
+    margin-top: 20px;
+   
+}
+
+.time-picker select {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+     background: rgba(255,255,255,0.85); 
+}
+
+.picker-label {
+  font-size: 14px;
+  color: var(--profile-text-color--);
+  margin-top: 5px;
+}
+.custom-select {
+  width: 100px;
+  font-family: sans-serif;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+
+.custom-select .selected {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size:14px ;
+  text-align: center;
+}
+
+.custom-select .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 80px; 
+  overflow-y: auto; /* scroll */
+  display: none;
+  z-index: 10;
+  text-align: center;
+     background:var(--profile-text-color--); 
+  backdrop-filter: blur(15px);
+ 
+
+}
+
+.custom-select .options div {
+  padding: 5px 10px;
+}
+
+.custom-select .options div:hover {
+   background-color: var(--base-color--);
+  color: white;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}

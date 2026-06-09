@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Menu Item</title>
+    <link rel="preload" as="image" href="/images/wooden1.jpg">
+    <link rel="stylesheet" href="/css/manager/add_menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/staff_main.css">
+    <link rel="stylesheet" href="/css/staff_sideBar.css">
+
+</head>
+<body>
+<div class="sidebar">
+        <div class="logo">Manager Panel</div>
+        <div class="menu">
+            <a href="/lowStock" class="menu-item">View Low Stock</a>
+            <a href="/manageInventory" class="menu-item">Manage Inventory</a>
+            <a href="/manageCategory" class="menu-item">Manage Category</a>
+            <a href="/manage_menus" class="menu-item active">Manage Menus</a>
+            <a href="/manageTable" class="menu-item">Manage Table</a>
+            <a href="/sale_record" class="menu-item">View Sale Records</a>
+        </div>
+    </div>
+        <div class="form-card two-column-card">            
+            <div class="left-col">
+                <div class="card-header">
+                    <h2>Edit Menu Item</h2>
+                </div>
+
+                <form class="add-menu-item-form" id="addMenuItemForm">
+                    <div class="input-group">
+                        <label for="item-name">Item Name</label>
+                        <input type="text" id="item-name" placeholder="name..." required>
+                    </div>
+                    <div class="input-group">
+                        <label>Category</label>
+                        <div class="custom-select" id="customCategorySelect">
+                            <div class="select-trigger">
+                                <span id="selectedCategory">Choose Category...</span>
+                                <i class="fa-solid fa-chevron-down custom-arrow"></i>
+                            </div>
+                            <div class="options-list">
+                            </div>
+                            <input type="hidden" id="category" name="category" value="">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="price">Price</label>
+                        <input type="number" id="price" placeholder="price..." min="0" step="0.01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="photo">Photo</label>
+                        <div class="file-upload">
+                            <input type="file" id="photo" accept="image/*">
+                            <label for="photo" class="file-label">
+                                Choose Image
+                            </label>
+                            <span id="file-name">No file chosen</span>
+                        </div>                    </div>
+                    <div class="input-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" class="description" placeholder="A brief description of the menu item..." rows="4"></textarea>
+                    </div>
+                    
+                </form>
+            </div>
+
+            <div class="right-col">
+                <div class="right-top">
+                    <h5>Set Inventory Quantity</h5>
+                    <div class="selected-list">
+                        <div class="empty-message">
+                            There is no Inventory selected
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <h5>Choose Inventory</h5>
+                    <div class="inventory-list">
+                  
+                    </div>
+                </div>
+                <div class="btns">
+                    <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+                    <!-- <button type="submit" id="addBtn" class="submit-btn">Update</button> -->
+                     <button type="button" id="addBtn" class="submit-btn">Update</button>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="/js/manager/edit_menu.js"></script>
+    <script src="/js/staff_sidebar.js"></script>
+
+</body>
+</html>

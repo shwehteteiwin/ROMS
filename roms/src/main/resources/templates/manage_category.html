@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Manage Category</title>
+<!-- <link rel="preload" as="image" href="/images/wooden1.jpg"> -->
+<link rel="stylesheet" href="/css/staff_main.css">
+<link rel="stylesheet" href="/css/manager/manage_category.css">
+<link rel="stylesheet" href="/css/manager/manage_inventory.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/staff_sideBar.css">
+
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Manager Panel</div>
+        <div class="menu">
+            <a href="/lowStock" class="menu-item">View Low Stock</a>
+            <a href="/manageInventory" class="menu-item">Manage Inventory</a>
+            <a href="/manageCategory" class="menu-item active">Manage Category</a>
+            <a href="/manage_menus" class="menu-item">Manage Menus</a>
+            <a href="/manageTable" class="menu-item">Manage Table</a>
+            <a href="/sale_record" class="menu-item">View Sale Records</a>
+        </div>
+    </div>
+    <div class="animate__animated animate__fadeIn container main-content">
+        <div class="header">
+            <div>
+                <h3 class="page-title" id="totalCount"></h3>
+            </div>
+            <button class="add-btn">Add Categories</button>
+        </div>
+        <div class="card-container" id="cardContainer">
+            <div class="card-item">
+                <div class="card-info">
+                    <h3 class="name">Pizza</h3>
+                </div>
+                <div class="btns">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card-info">
+                    <h3 class="name">Drinks</h3>
+                </div>
+                <div class="btns">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+            <div class="card-item">
+                <div class="card-info">
+                    <h3 class="name">Snacks</h3>
+                </div>
+                <div class="btns">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+<script src="/js/manager/manage_category.js"></script>
+    <script src="/js/staff_sidebar.js"></script>
+
+</html>

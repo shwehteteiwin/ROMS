@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Edit Profile</title>
+<link rel="preload" as="image" href="/images/photos/resturant4.jpg">
+<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="/css/customer/edit.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+
+
+</head>
+
+<body>
+
+<!-- background blur -->
+<div class="blur-overlay" id="overlay"></div>
+<header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <a href="/profile">Profile</a>
+        <!-- <a href="/login">Login/ Sign-up</a> -->
+        </div>
+    </nav>
+    </header>
+<div class="animate__animated animate__fadeIn profile-box text-center">
+
+    <!-- Profile Image -->
+    <div class="avatar-wrapper">
+        <img id="profileImg" src="/images/photos/cus5.jpg" alt="Profile">
+        <label for="profileInput" class="edit-icon">
+            <i class="fa fa-pen"></i>
+        </label>
+        <input type="file" id="profileInput" accept="image/*" hidden>
+    </div>
+<input type="text" id="nameInput" class="input-line" value="">
+<input type="email" id="emailInput" class="input-line" value="">
+
+    <button class="save-btn">Save Changes</button>
+</div>
+
+<script src="/js/customer/edit.js"></script>
+</body>
+</html>

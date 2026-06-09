@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login</title>
+    <link rel="preload" href="../photos/green_corner2.jpg">
+    <link rel="stylesheet" href="./staff_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../staff_main.css">
+</head>
+<body>
+    <!-- <div class="blur-overlay" id="overlay"></div> -->
+        <div class="animate__animated animate__fadeIn login-card">
+            <!-- <button type="button" class="close-card" id="closeBtn" title="Close Portal">&times;</button> -->
+
+            <div class="card-header">
+                <h2>Login</h2>
+                <p>You're entering as a Staff...</p>
+            </div>
+            
+            <form id="loginForm" novalidate>
+                
+                <div class="input-group">
+                    <label>Position</label>
+                    <div class="custom-select" id="customSelect">
+                        <div class="select-trigger">
+                            <span id="selectedRole">Choose Role...</span>
+                            <i class="fa-solid fa-chevron-down custom-arrow"></i>
+                        </div>
+                        <div class="options-list">
+                            <div class="option" data-value="admin">Restaurant Manager</div>
+                            <div class="option" data-value="staff">Kitchen Staff</div>
+                        </div>
+                        <input type="hidden" id="role" name="role" value="">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Security Key</label>
+                    <div class="password-wrapper">
+                        <i class="fa-solid fa-lock prefix-icon"></i>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <i class="fa-regular fa-eye-slash" id="togglePassword"></i>
+                    </div>
+                    <div id="error-box" class="error-container">
+                        <p><i class="fa-solid fa-circle-exclamation"></i> Incorrect password. Please try again.</p>
+                    </div>
+                    <small id="space-warning" class="warning-text">Spaces are not allowed</small>
+                </div>
+                
+                <!-- <div class="btn-width"> -->
+                    <button type="submit" class="login-btn" id="submitBtn">
+                        <span class="btn-text">Login</span>
+                        <i class="fa-solid fa-circle-notch fa-spin loader" id="loaderIcon"></i>
+                    </button>
+                <!-- </div> -->
+            </form>
+        </div>
+
+    <script src="./staff_login.js"></script>
+</body>
+</html>

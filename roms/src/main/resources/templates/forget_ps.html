@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forget Password</title>
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/customer/forget_ps.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+
+</head>
+<body>
+    <!-- <div class="overlay"> -->
+        <div class="blur-overlay" id="overlay"></div>
+        <header>
+        <nav class="nav">
+            <div class="logo">My Restaurant</div>
+            <div class="nav-links">
+            <a href="/dashboard">Home</a>
+            <a href="/menu">Menu</a>
+            <a href="/reservations/myReservation">My Reservation</a>
+            <a href="/cus_order_status_bills">Order Status and Bills</a>
+            <a href="/profile">Profile</a>
+            <!-- <a href="/login">Login/ Sign-up</a> -->
+            </div>
+        </nav>
+        </header>
+        <div class="animate__animated animate__fadeIn card">
+
+            <h2 class="title">Forget Password</h2>
+            <p class="subtitle">We'll email you an OTP to reset your password.</p>
+
+            <!-- Email -->
+            <div class="email-box">
+                <input type="email" placeholder="Enter your email..." />
+                <button class="send-btn">Send</button>
+            </div>
+
+            <p class="timer-text">Will receive OTP within (<span>30</span>s)</p>
+
+            <!-- OTP inputs -->
+            <div class="otp-box">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+            </div>
+
+            <button class="check-btn">Check OTP</button>
+
+            <a href="/login" class="back-link">← Back to Login</a>
+
+            <!--<p class="resend-text">
+                Didn't get an OTP?
+                <span class="resend-link">Click the Resend!</span>
+            </p>-->
+
+        </div>
+    <!-- </div> -->
+
+<script src="/js/customer/forget_ps.js"></script>
+</body>
+</html>

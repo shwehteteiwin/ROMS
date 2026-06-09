@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Inventory</title>
+    <link rel="preload" as="image" href="/images/wooden1.jpg">
+    <link rel="stylesheet" href="/css/manager/add_category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/staff_main.css">
+    <link rel="stylesheet" href="/css/staff_login.css">
+    <link rel="stylesheet" href="/css/staff_sideBar.css">
+
+    <style>
+        .form-card{
+            min-width: 450px;
+        }
+        
+ .custom-select {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 25px;
+}
+
+/* Box style – SAME as input */
+.select-trigger {
+  width: 100%;
+  height: 40px; /* match input height */
+  padding: 0 10px;
+
+  border: 2px solid transparent;
+  border-radius: 14px;
+
+  font-size: 12px;
+  background: var(--bg-input);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+
+/* Hover / Active effect */
+.custom-select.active .select-trigger,
+.select-trigger:hover {
+  border-color: var(--more-green-color--);
+  background: white;
+}
+
+/* Dropdown list */
+.options-list {
+  position: absolute;
+  top: 105%;
+  left: 0;
+
+  width: 100%;
+  background: white;
+
+  border-radius: 14px;
+  border: 1px solid #eee;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+
+  display: none !important;
+  overflow: hidden;
+
+  z-index: 101;
+}
+
+/* Show dropdown */
+.custom-select.active .options-list {
+  display: block !important;
+  animation: slideDown 0.2s ease-out;
+}
+
+/* Options */
+.option {
+  padding: 12px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: black;
+}
+
+.option:hover {
+  background-color: var(--more-green-color--);
+  color: white;
+}
+.custom-select,
+.select-trigger {
+  box-sizing: border-box;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+    </style>
+</head>
+<body>
+  <div class="sidebar">
+        <div class="logo">Manager Panel</div>
+        <div class="menu">
+            <a href="/lowStock" class="menu-item">View Low Stock</a>
+            <a href="/manageInventory" class="menu-item active">Manage Inventory</a>
+            <a href="/manageCategory" class="menu-item">Manage Category</a>
+            <a href="/manage_menus" class="menu-item">Manage Menus</a>
+            <a href="/manageTable" class="menu-item">Manage Table</a>
+            <a href="/sale_record" class="menu-item">View Sale Records</a>
+        </div>
+    </div>
+        <div class="form-card two-column-card main-content">
+                <div class="card-header">
+                    <h2>Add New Inventory</h2>
+                </div>
+
+                <form class="add-category-form" id="addInventoryForm">
+                    <div class="input-group">
+                        <label for="inventory-name">Inventory Name</label>
+                        <input type="text" id="inventory-name" placeholder="Fish,etc..." required>
+                        <label for="inv-qty">Quantity</label>
+                        <input type="number" id="inv-qty" min="0" placeholder="10,20,etc..." required>
+                        <label>Unit</label>
+                        <div class="custom-select" id="customSelect">
+                            <div class="select-trigger">
+                                <span id="selectedUnit">Choose Unit...</span>
+                                <i class="fa-solid fa-chevron-down custom-arrow"></i>
+                            </div>
+                            <div class="options-list">
+                                <div class="option" data-value="kg">kg</div>
+                                <div class="option" data-value="pcs">pcs</div>
+                                <div class="option" data-value="liter">liter</div>
+                            </div>
+                            <input type="hidden" id="unit" name="unit" value="">
+                        </div>
+                        <label for="inv-threshold">Threshold</label>
+                        <input type="number" id="inv-threshold" min="0" placeholder="20,30,etc..." required>
+                        <label for="exp-date">Date</label>
+                        <input type="date" id="exp-date" class="glass-input" placeholder="Select expired date">
+                    </div>
+
+                    <div class="btns">
+                        <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+                        <button type="button" id="addBtn" class="submit-btn">Add</button>
+                    </div>
+                </form>
+
+            <!-- Confirmation Modal -->
+            <div id="confirmModal" class="modal">
+                <div class="modal-content">
+                    <h3>Confirm Inventory Item</h3>
+                    <p id="confirmText"></p>
+
+                    <div class="btns">
+                        <button type="button" id="backBtn" class="cancel-btn">Cancel</button>
+                        <button type="button" id="confirmBtn" class="submit-btn">Confirm</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-box">
+                 Inventory Item Added Successfully!
+            </div>
+        </div>
+</body>
+<script src="/js/manager/add_inventory.js"></script>
+    <script src="/js/staff_sidebar.js"></script>
+
+<script>
+</script>
+</html>

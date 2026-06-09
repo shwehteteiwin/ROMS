@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Pop Up</title>
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="/css/role_popup1_1.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="blur-overlay" id="overlay"></div>
+    <div class="page-content" id="pageContent">
+        <button id="openPopup" class="openPopup">Choose User</button>
+        <!-- <button onclick="openMenuPage()" class="openPopup">Menu</button> -->
+    </div>
+
+    <div class="popup" id="popupBox">
+        <h2>Choose Role</h2>
+        <div class="popup-buttons">
+            <a href="/login" class="role-btn">
+                <img src="/images/cus2.jpeg" class="profile_pt">
+                <div class="role_text">Customer</div>
+            </a>
+            <a href="/staff_login" class="role-btn">
+                <img src="/images/chef4.jpeg" class="profile_pt">
+                <div class="role_text">Staff</div>
+            </a>
+        </div>
+
+        <button class="close-btn" id="closePopup">✕</button>
+    </div>
+</body>
+<script src="/js/role_popup1_1.js"></script>
+</html>

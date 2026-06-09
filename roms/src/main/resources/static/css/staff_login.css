@@ -1,0 +1,230 @@
+.login-card {
+  position: relative;
+  border: 2px solid var(--card-border);
+  padding: 50px;
+  border-top-left-radius: 8%;
+  border-bottom-right-radius: 8%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  max-width: 520px;
+  z-index: 2;
+  color: var(--profile-text-color--);
+}
+
+/* .close-card {
+    position: absolute; top: 25px; right: 25px;
+    background: #f0f0f0; border: none; width: 40px; height: 40px;
+    border-radius: 50%; font-size: 22px; color: #888;
+    cursor: pointer; transition: 0.3s;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.close-card:hover { background: var(--error-red); color: white; transform: rotate(90deg); } */
+
+.card-header {
+  /* text-align: left; */
+  margin-bottom: 35px;
+}
+.card-header h2 {
+  font-size: 1.5rem;
+  color: var(--more-green-color--);
+}
+.card-header p {
+  color: var(--text-main);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+.input-group label {
+  display: block;
+  width: 95%;
+  font-weight: 300;
+  font-size: 12px;
+  margin: auto auto 5px auto;
+  /* text-transform: uppercase;  */
+  color: var(--profile-text-color--);
+}
+
+.custom-select {
+  /* position: relative; */
+  margin: auto;
+  width: 100%;
+  z-index: 100;
+}
+
+.select-trigger {
+  width: 100%;
+  padding: 10px;
+  background: var(--bg-input);
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  font-size: 12px;
+  color: black;
+}
+
+
+/* .select-trigger {
+  width: 100%;
+  padding: 10px;
+
+  background: var(--bg-input);
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s;
+  border: 2px solid transparent;
+
+  font-size: 12px;
+  color: black;
+
+  box-sizing: border-box;   
+  margin-bottom: 5px;       
+} */
+
+.custom-select.active .select-trigger {
+  border-color: var(--primary-green);
+  background: white;
+}
+
+.options-list {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  display: none;
+  overflow: hidden;
+  border: 1px solid #eee;
+  z-index: 101;
+}
+
+.custom-select.active .options-list {
+  display: block;
+  animation: slideDown 0.2s ease-out;
+}
+
+.option {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: black;
+  font-size: 14px;
+}
+
+.option:hover {
+  background-color: var(--more-green-color--);
+  color: white;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.password-wrapper {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  z-index: 100;
+}
+.password-wrapper input {
+  width: 100%;
+  padding: 10px 55px;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  font-size: 12px;
+  background: var(--bg-input);
+  outline: none;
+  transition: 0.3s;
+}
+.password-wrapper input:focus {
+  border-color: var(--primary-green);
+  background: white;
+}
+.prefix-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+#togglePassword {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+  font-size: 1.1rem;
+}
+/* .btn-width{
+    width: 100%;
+    position: relative;
+    
+} */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--more-green-color--);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: var(--card-border);
+  color: white;
+  /* border: 1px solid var(--card-border); */
+}
+
+.loader {
+  display: none !important;
+}
+
+.btn-loading .loader {
+  display: inline-block !important;
+}
+.btn-loading .btn-text {
+  display: none;
+}
+
+.error-container {
+  margin: 5px;
+  display: none;
+  color: var(--error-red);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.warning-text {
+  color: var(--error-red);
+  font-size: 0.8rem;
+  display: none;
+  margin-top: 8px;
+  font-weight: 600;
+}

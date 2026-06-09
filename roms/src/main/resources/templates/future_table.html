@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Table</title>
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="/css/customer/future_table.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+
+
+</head>
+<body>
+    <div class="blur-overlay" id="overlay"></div>
+    <header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <a href="/profile">Profile</a>
+        <!-- <a href="/login">Login/ Sign-up</a> -->
+        </div>
+    </nav>
+    </header>
+    <div class="container">
+        <div class="tb-card">
+            <h2>Available Tables</h2>
+            <div class="table_group">
+
+                <div class="table_card" th:each="table : ${tables}">
+
+                    <img th:src="@{/images/table_default.jpg}" alt="">
+
+                    <div class="card_texts">
+                        <h4 th:text="'Table-' + ${table.tableNumber}"></h4>
+                        <p class="prices"
+                           th:text="${table.capacity} + ' seats'"></p>
+
+                        <button class="select-btn"
+                                th:attr="data-id=${table.tableId}">
+                            Select Table
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <form th:action="@{/reservations/future-book}" method="post">
+            <input type="hidden" name="tableId" id="selectedTableId">
+            <input type="hidden" name="startTime" th:value="${startTime}">
+            <input type="hidden" name="endTime" th:value="${endTime}">
+            <button type="submit" class="reserve-btn">Make Reserve</button>
+        </form>
+    </div>
+    <div th:if="${successMessage}" class="toast success-toast" id="successToast" th:text="${successMessage}">
+    </div>
+
+    <script>
+        const toast = document.getElementById("successToast");
+
+        if (toast) {
+            setTimeout(() => {
+                toast.classList.add("show");
+            }, 100);
+
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3000);
+        }
+    </script>
+</body>
+<script src="/js/customer/future_table.js"></script>
+</html>

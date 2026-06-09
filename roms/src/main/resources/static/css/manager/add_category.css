@@ -1,0 +1,120 @@
+
+.form-card { 
+    position: relative;
+    border: 2px solid var(--card-border);
+    padding: 50px;
+    border-top-left-radius: 8%;
+    border-bottom-right-radius: 8%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    max-width: 520px;
+    min-width: 350px;
+    z-index: 2;
+    color: var(--profile-text-color--);
+}
+
+.card-header {
+    text-align: center; 
+    margin-bottom: 35px; 
+} 
+.card-header h2 { 
+    font-size: 1.5rem; 
+    color: var(--more-green-color--);
+}
+.card-header p { 
+    color: var(--text-main); 
+    font-size: 12px; 
+    margin-top: 10px; 
+}
+.input-group { 
+    margin-bottom: 25px; 
+    position: relative; 
+}
+.input-group label { 
+    display: block; 
+    font-weight: 300; 
+    margin-bottom: 10px; 
+    font-size: 12px; 
+    color: var(--profile-text-color--);
+    text-align: left; 
+}
+
+.input-group input {
+    width: 100%; 
+    padding: 10px; 
+    border: 2px solid transparent; 
+    border-radius: 14px; 
+    font-size: 12px; 
+    background: var(--bg-input);
+    outline: none; 
+    transition: 0.3s;
+    margin-bottom: 5px;
+}
+
+.input-group input:focus { 
+    border-color: var(--primary-green); 
+    background: white;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
+.submit-btn, .cancel-btn {
+    width: 40%; 
+    padding: 10px; 
+    color: white; 
+    border: none; 
+    border-radius: 15px; 
+    font-size: 14px; 
+    font-weight: 500; 
+    cursor: pointer;
+    border: 1px solid white;
+    transition: 0.3s ease;
+}
+.submit-btn{
+    background: var(--more-green-color--);
+}
+.submit-btn:hover { 
+    background: white; 
+    color: var(--more-green-color--);
+    border: 1px solid var(--more-green-color--);
+}
+.cancel-btn{
+    background: var(--error-red);
+}
+.cancel-btn:hover{
+    border: 1px solid var(--error-red);
+    background-color: white;
+    color: var(--error-red);
+}
+ .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+     z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    animation: fadeIn 0.3s ease;
+    text-align: center;
+} 
+.success-box {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--more-green-color--);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+
+
+
+    

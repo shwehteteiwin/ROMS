@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus</title>
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="/css/menuMain.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body class="menu_layout">
+    <div class="blur-overlay" id="overlay"></div>
+    <header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <a href="/profile">Profile</a>
+        <a href="/login">Login/ Sign-up</a>
+        </div>
+    </nav>
+    </header>
+    <div class="animate__animated animate__fadeIn menu_container margin_top">
+        <div class="menu_categories">
+
+
+            <div class="one_category">
+                <h2 class="title"></h2>
+                <div class="menu_items">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popupBox">
+        <h2></h2>
+        <img src="" alt="">
+        <p class="description"></p>
+        <p class="price"></p>
+        <button class="btn-login-w100 close-btn">Close</button>
+    </div>
+
+    </div>
+    <div class="animate__animated animate__fadeIn order_list margin_top">
+        <h1>Orders List</h1>
+        <!-- Order cards go here -->
+        <div class="order_items"></div>
+        <hr>
+        <div class="list_total">
+            <div class="total_price"></div>
+            <button class="order_now btn-login-w100">Order Now</button>
+        </div>
+    </div>
+    <div class="animate__animated animate__fadeIn order_summary">
+        <h2>Your Orders</h2>
+        <!-- <div class="dropdown tableDropdown">
+            <div class="select">
+                <span class="selected">Select Table</span>
+                <span class="arrow"></span>
+            </div>
+
+            <div class="dropdown-menu">
+                <div class="item" data-value=""></div>
+            </div> -->
+        <div class="dropdown tableDropdown">
+            <div class="select">
+                <span class="selected">Select Table</span>
+                <span class="arrow"></span>
+            </div>
+
+            <div class="dropdown-menu"></div>
+            <input type="hidden" name="table" class="selectedTable">
+        </div>
+        <div class="order_items_summary"></div>
+
+        <div class="total_price">
+            <h3>Total: <span id="summaryTotal"></span></h3>
+        </div>
+        <button class="close-summary btn-login-w100 close-btn">Close</button>
+        <button class="success-btn btn-login-w100">Confirm Order</button>
+    </div>
+</body>
+<script src="/js/menu.js"></script>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Table</title>
+    <link rel="preload" as="image" href="/images/wooden1.jpg">
+    <link rel="stylesheet" href="/css/manager/add_category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/staff_main.css">
+    <link rel="stylesheet" href="/css/staff_sideBar.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Manager Panel</div>
+        <div class="menu">
+            <a href="/lowStock" class="menu-item">View Low Stock</a>
+            <a href="/manageInventory" class="menu-item">Manage Inventory</a>
+            <a href="/manageCategory" class="menu-item">Manage Category</a>
+            <a href="/manage_menus" class="menu-item">Manage Menus</a>
+            <a href="/manageTable" class="menu-item active">Manage Table</a>
+            <a href="/sale_record" class="menu-item">View Sale Records</a>
+        </div>
+    </div>
+        <div class="form-card two-column-card main-content">
+                <div class="card-header">
+                    <h2>Add New Table</h2>
+                </div>
+
+                <form class="add-category-form" id="addTableForm">
+                    <div class="input-group">
+                        <label for="table-name">Table Name</label>
+                        <input type="text" id="table-name" placeholder="1, 2,etc..." required>
+                        <label for="seat-qty">Number of Seats</label>
+                        <input type="number" id="seat-qty" placeholder="1, 2 ,etc..." min="1" required>
+                    </div>
+
+                    <div class="btns">
+                        <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+                        <button type="submit" id="addBtn" class="submit-btn">Add</button>
+                    </div>
+                </form>
+
+            <!-- Confirmation Modal -->
+            <div id="confirmModal" class="modal">
+                <div class="modal-content">
+                    <h3>Confirm Table</h3>
+                    <p id="confirmText"></p>
+
+                    <div class="btns">
+                        <button type="button" id="backBtn" class="cancel-btn">Cancel</button>
+                        <button type="button" id="confirmBtn" class="submit-btn">Confirm</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-box">
+                Table Added Successfully!
+            </div>
+        </div>
+</body>
+<script src="/js/manager/add_table.js"></script>
+    <script src="/js/staff_sidebar.js"></script>
+
+</html>

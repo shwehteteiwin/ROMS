@@ -1,0 +1,212 @@
+.container{
+    z-index: 2;
+    position: relative;
+    width: 750px;
+    height: 550px;
+    /* background: rgba(255, 255, 255, 0.15); */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+}
+.container .login h1 {
+    font-size: 2rem;
+    color: var(--base-color--);
+    text-align: center;
+}
+.container .register h1{
+    font-size: 2rem;
+    color: var(--profile-text-color--);
+    text-align: center;
+}
+.form_box{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    /* background-color: transparent; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.6s ease-in-out, visibility 0.6s;
+}
+.container.active .form_box{
+    right:50%
+}
+.form_box.login {
+    opacity: 1;
+    visibility: visible;
+}
+.form_box.register{
+    visibility: hidden;
+}
+.container.active .form_box.login {
+    opacity: 0;
+    visibility: hidden;
+}
+.container.active .form_box.register {
+    opacity: 1;
+    visibility: visible;
+}
+form{
+    width: 100%;
+}
+.container .user_input{
+    margin: 20px 0px;
+    border-bottom: 2px solid #fff;
+    width: 310px;
+    position: relative;
+}
+.user_input label{
+    position:   absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.user_input input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+.togglePassword { 
+    position: absolute; 
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    cursor: pointer; 
+    color: #ffffff; 
+}
+
+.container .forgetpwd{
+    margin: 35px 0px;
+    font-size: 0.85rem;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.forgetpwd label{
+    display: flex;
+    align-items: center;
+}
+.forgetpwd label input{
+    margin-right: 3px;
+}
+.forgetpwd a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.forgetpwd a:hover{
+    color: var(--base-color--);
+}
+.toggle-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.toggle-box::before{
+    content: '';
+    position: absolute;
+    left: -250%;
+    width: 300%;
+    height: 100%;
+    background: var(--profile-text-color--);
+    border-radius: 150px;
+    z-index: 2;
+    transition: all 0.6s ease-in-out;
+}
+.container.active .toggle-box::before{left: 50%;}
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: all 0.6s ease-in-out;
+}
+.toggle-panel.toggle-left{
+    left: 0;
+}
+.container.active .toggle-panel.toggle-left{
+    left: -50%;
+}
+.toggle-panel.toggle-right{
+    right: -50%;
+}
+.container.active .toggle-panel.toggle-right{
+    right: 0;
+}
+.container .toggle-box button{
+    border: 1px solid #fff;
+    margin-top: 25px;
+}
+.all-btn {
+    padding: 10px 16px;
+    background: var(--profile-text-color--);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.all-btn:hover{
+    background-color: var(--base-color--);
+}
+.all-btn:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+}
+/* OTP */
+.otp-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.otp-box input {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+/* Email */
+.email-box {
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    gap: 10px;
+}
+
+.email-box input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}

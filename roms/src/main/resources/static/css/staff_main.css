@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --card-green: rgb(60, 160, 60);
+    --card-border: #1b4332;
+    --hover-green: white;
+    --error-red: #e63946;
+    --text-main: #1b4332;
+    --bg-input: #f4f7f5;
+    --glass-card: rgba(255, 255, 255, 0.98);
+    --profile-text-color-- : #2ecc71;
+    --more-green-color-- : rgb(14, 63, 14);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    /* height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2ece7;
+    overflow: hidden; */
+    min-height: 100vh;
+    /* background-color: rgb(108, 191, 247); */
+    background: url("/images/wooden1.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blur-overlay {
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(4px);
+    opacity: 1;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 1;
+}

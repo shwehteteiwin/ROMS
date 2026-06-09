@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Form</title>
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="/css/customer/currentRS.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+<body>
+    <div class="blur-overlay" id="overlay"></div>
+    <header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <a href="/profile">Profile</a>
+        <!-- <a href="/login">Login/ Sign-up</a> -->
+        </div>
+    </nav>
+    </header>
+    <div class="animate__animated animate__fadeIn reservation-card">
+
+        <h2> Reservation Form</h2>
+        <form th:action="@{/reservations/book-now}" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            <div class="input-group ">
+                <label>Name</label>
+                <input type="text" name="customerName" class="nn" th:value="${customerName}" readonly>
+            </div>
+
+            <div class="time-picker">
+                <label class="time-label">Duration</label>
+
+                <div class="custom-select" id="startHourCustom">
+                    <div class="selected">Hour</div>
+                    <div class="options"></div>
+                </div>
+                <span class="picker-label">hr</span>
+                <div class="custom-select" id="startMinuteCustom">
+                    <div class="selected">Minute</div>
+                    <div class="options"></div>
+                </div><span class="picker-label">min</span>
+
+            </div>
+            <input type="hidden" name="hour" id="hourInput">
+            <input type="hidden" name="minute" id="minuteInput">
+            <input type="hidden" name="tableId" th:value="${tableId}" />
+            <button type="submit" class="reserve-btn">Make Reservation</button>
+        </form>
+    </div>
+    <!-- Conflict Modal -->
+    <div id="conflictModal" th:if="${conflictMessage}" class="modal-overlay">
+
+        <div class="modal-box">
+            <h3>Reservation Conflict</h3>
+
+            <p th:text="${conflictMessage}"></p>
+
+            <div class="modal-buttons">
+                <button id="reenterBtn" class="btn-primary">
+                    Re-enter Duration
+                </button>
+
+                <button id="rechooseBtn" class="btn-secondary">
+                    Rechoose Table
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- <script th:if="${errorMessage}">
+        alert("Please choose reservation duration.");
+    </script> -->
+    <script th:if="${conflictMessage}">
+        document.getElementById("reenterBtn")
+            .addEventListener("click", function () {
+
+                // Just close modal (stay on current page)
+                document.getElementById("conflictModal").style.display = "none";
+            });
+
+        document.getElementById("rechooseBtn")
+            .addEventListener("click", function () {
+
+                // Go back to dashboard to choose table
+                window.location.href = "/dashboard";
+            });
+    </script>
+    <script th:if="${successMessage}">
+        alert("Reservation created successfully!");
+        window.location.href = "/dashboard";
+    </script>
+    <script th:if="${errorMessage}">
+        alert("Please choose reservation duration.");
+    </script>
+
+    <script src="/js/customer/currentRS.js"></script>
+
+</body>
+
+</html>

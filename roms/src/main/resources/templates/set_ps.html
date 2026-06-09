@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Password</title>
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/customer/main.css">
+    <link rel="stylesheet" href="/css/set_ps.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+
+</head>
+<body>
+    <div class="blur-overlay" id="overlay"></div>
+<header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <a href="/profile">Profile</a>
+        <!-- <a href="/login">Login/ Sign-up</a> -->
+        </div>
+    </nav>
+    </header>
+    <div class="animate__animated animate__fadeIn reset-container">
+        <h2>Set Your Password</h2>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password...">
+            <i class="fa-regular fa-eye-slash eye-icon" data-target="password"></i>
+        </div>
+        <p id="lengthNote"></p>
+
+        <div class="input-group">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password...">
+            <i class="fa-regular fa-eye-slash eye-icon" data-target="confirmPassword"></i>
+        </div>
+
+        <button class="btn" id="resetBtn">Save Password</button>
+        <a href="/login" class="back">← Back to Login</a>
+    </div>
+
+    <script src="/js/set_ps.js"></script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset Password</title>
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/customer/main.css">
+    <link rel="stylesheet" href="/css/set_ps.css">
+</head>
+<body>
+
+    <div class="blur-overlay" id="overlay"></div>
+
+    <div class="animate__animated animate__fadeIn reset-container">
+        <h2>Enter Password</h2>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Password...">
+            <i class="fa-regular fa-eye-slash eye-icon" data-target="password"></i>
+        </div>
+        <p class="note" id="lengthNote"></p>
+
+        <div class="input-group">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password...">
+            <i class="fa-regular fa-eye-slash eye-icon" data-target="confirmPassword"></i>
+        </div>
+
+        <button class="btn" id="resetBtn">Save</button>
+        <a href="/login" class="back">← Back to Login</a>
+    </div>
+
+
+  <div class="popup success" id="successPopup">
+      <span class="close-popup">&times;</span>
+     <h3>Successfully Reset Password!</h3>
+    <p>You can now use your new password to login to your account.</p>
+    <button class="btn" id="loginBtn">Login</button>
+  </div>
+
+
+  
+   <div class="popup fail" id="failPopup">
+      <span class="close-popup">&times;</span>
+      <h3>Failed Password Reset!</h3>
+    <p id="failMsg">New passwords don't match!</p>
+   
+   </div>
+
+
+    <script src="/js/set_ps.js"></script>
+</body>
+</html> -->

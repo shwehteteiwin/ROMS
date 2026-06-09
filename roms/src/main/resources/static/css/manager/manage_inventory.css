@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.card-container {
+    width: 100%;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.card-item {
+   
+        
+    align-items: center;
+    text-align: center;
+
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px 40px;
+}
+.card-info {
+    width: 100%;
+    align-items: center;
+    font-size: 15px;
+  
+}
+.card-info > div {
+    flex: 1;
+    text-align: center;
+}
+/* manage_inventory.css */
+
+.edit-btn,
+.delete-btn{
+    width: 90px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+

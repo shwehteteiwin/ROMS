@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Reservations</title>
+
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/customer/myReservation.css">
+    <link rel="stylesheet" href="/css/nav.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <!-- Blur Overlay -->
+    <div class="blur-overlay" id="overlay"></div>
+
+    <!-- Header -->
+    <header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <a href="/profile">Profile</a>
+        <!-- <a href="/login">Login/ Sign-up</a> -->
+        </div>
+    </nav>
+    </header>
+
+    <!-- Reservation Page -->
+    <div class="animate__animated animate__fadeIn reservation-page margin_top">
+        <h2 class="page-title">My Reservation</h2>
+        <div th:if="${#lists.isEmpty(futureReservations)}">
+            <p>No future reservations.</p>
+        </div>
+        <div th:if="${!#lists.isEmpty(futureReservations)}">
+            <p>Future Reservation</p>
+
+            <div class="cancel-item" th:each="r : ${futureReservations}">
+
+                <div class="cancel-info">
+                    <strong>
+                        Table <span th:text="${r.table.tableNumber}"></span>
+                    </strong>
+
+                    <div>
+                        Start Time:
+                        <span th:text="${#temporals.format(r.reservationTime, 'yyyy-MM-dd HH:mm')}"></span>
+                    </div>
+
+                    <div>
+                        End Time:
+                        <span th:text="${#temporals.format(r.finishedTime, 'yyyy-MM-dd HH:mm')}"></span>
+                    </div>
+                </div>
+
+                <form th:action="@{/reservations/cancel/{id}(id=${r.reservationId})}" method="post">
+                    <button type="submit" class="cancel-btn">
+                        Cancel
+                    </button>
+                    <!-- <button type="button" class="cancel-btn" th:data-id="${r.reservationId}">
+                    Cancel
+                </button> -->
+
+                </form>
+            </div>
+        </div>
+        <div th:if="${#lists.isEmpty(currentReservations)}">
+            <p>No current reservations.</p>
+        </div>
+        <!-- shwehtet  -->
+        <!-- <p>Current Reservation</p>
+<div th:if="${#lists.isEmpty(currentReservations)}">
+    <p>No current reservations.</p>
+</div>
+
+<div class="cancel-item current" th:each="r : ${currentReservations}">
+    <div class="cancel-info">
+        <strong>Table <span th:text="${r.table.tableNumber}"></span></strong>
+        <div>Start Time: <span th:text="${#temporals.format(r.reservationTime, 'yyyy-MM-dd HH:mm')}"></span></div>
+        <div>End Time: <span th:text="${#temporals.format(r.finishedTime, 'yyyy-MM-dd HH:mm')}"></span></div>
+    </div>
+
+    <form th:action="@{/reservations/cancel/{id}(id=${r.reservationId})}" method="post">
+        <button type="button" class="cancel-btn" th:data-id="${r.reservationId}">Cancel</button>
+    </form>
+</div> -->
+
+        <div th:if="${!#lists.isEmpty(currentReservations)}">
+            <p>Current Reservation</p>
+
+            <div class="cancel-item current" th:each="r : ${currentReservations}">
+
+
+                <div class="cancel-info">
+                    <strong>
+                        Table <span th:text="${r.table.tableNumber}"></span>
+                    </strong>
+
+                    <div>
+                        Start Time:
+                        <span th:text="${#temporals.format(r.reservationTime, 'yyyy-MM-dd HH:mm')}"></span>
+                    </div>
+
+                    <div>
+                        End Time:
+                        <span th:text="${#temporals.format(r.finishedTime, 'yyyy-MM-dd HH:mm')}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Success Message -->
+        <div th:if="${successMessage}">
+            <input type="hidden" id="successMessage" th:value="${successMessage}" />
+        </div>
+
+        <!-- Error Message -->
+        <div th:if="${errorMessage}">
+            <input type="hidden" id="errorMessage" th:value="${errorMessage}" />
+        </div>
+
+    </div>
+    </div>
+
+    <!-- JS -->
+    <script src="/js/customer/myReservation.js"></script>
+
+</body>
+
+</html>

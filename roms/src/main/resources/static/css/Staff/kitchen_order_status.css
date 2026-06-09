@@ -1,0 +1,88 @@
+.container{
+    width: 100vw;
+    max-width: 100%;
+    margin: 10px auto auto auto;
+    text-align: center;
+    color: var(--more-green-color--);
+}
+.board {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    margin-top: 10px;
+    width: 100%;
+    overflow-x: auto;
+}
+.board::-webkit-scrollbar{
+    display: none;
+}
+.table-column {
+    border: 2px solid var(--card-border);
+    min-width: 260px;
+    height:100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-title {
+    flex-shrink: 0;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.orders-container {
+    flex: 1; 
+    overflow-y: auto;
+}
+
+.order-card {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-top: 1px solid var(--card-border);
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.qty {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.status-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.status-buttons button {
+    flex: 1;
+    font-size: 11px;
+    padding: 4px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #555;
+    color: white;
+}
+
+.status-buttons button.active:nth-child(1){ background:#f39c12; }
+.status-buttons button.active:nth-child(2){ background:#3498db; }
+.status-buttons button.active:nth-child(3){ background:#2ecc71; }
+.status-buttons button.active:nth-child(4){ background:#27ae60; }
+
+.status-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.order-card.completed {
+    opacity: 0.5;
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/customer/dashboard.css" />
+    <link rel="stylesheet" href="/css/customer/carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  </head>
+  <body>
+    <div class="blur-overlay" id="overlay"></div>
+    <header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <!-- <a href="/profile">Profile</a> -->
+        <a href="/login">Login/ Sign-up</a>
+        </div>
+    </nav>
+    </header>
+    <div class="page-wrapper margin_top">
+      <div class="carousel-wrapper">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="carousel-card card4"></div>
+            <div class="carousel-card card1">Welcome to Our Service</div>
+            <div class="carousel-card card2">Check Our Latest Offers</div>
+            <div class="carousel-card card3">Discover Amazing Products</div>
+            <div class="carousel-card card4">Join Us Today!</div>
+
+            <!-- Clone first for smooth looping -->
+            <div class="carousel-card card1"></div>
+          </div>
+
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="title">
+          <h2>Available Tables</h2>
+          <!-- <a href="/reservations/future">Future Booking</a> -->
+        </div>
+        <div class="table_group">
+          <div class="table_card">
+            <img src="/images/table_default.jpg" alt="">
+            <div class="card_texts">
+                <h4></h4>
+                <p class="prices"></p>
+                <button class="btn-login-w100 add-btn" data-key="${key}">Book Now</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  <script src="/js/customer/dashboard.js"></script>
+  <script src="/js/Carousel.js"></script>
+  </body>
+</html>

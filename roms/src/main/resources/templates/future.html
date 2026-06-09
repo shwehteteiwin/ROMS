@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Future Reservation</title>
+
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="/css/customer/future.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+
+    <div class="blur-overlay" id="overlay"></div>
+    <header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <a href="/profile">Profile</a>
+        <!-- <a href="/login">Login/ Sign-up</a> -->
+        </div>
+    </nav>
+    </header>
+
+    <div class="animate__animated animate__fadeIn reservation-card">
+        <h2>Future Reservation</h2>
+
+        <!-- Name -->
+        <div class="input-group">
+            <label>Name</label>
+            <input type="text" name="customerName" th:value="${customerName}" readonly>
+        </div>
+
+        <!-- Date -->
+        <div class="input-group">
+            <label>Date</label>
+            <input type="text" id="myDate" class="glass-input" placeholder="Select date" readonly>
+        </div>
+
+        <!-- START TIME -->
+        <label class="time-label">Start Time</label>
+        <div class="time-picker">
+
+            <div class="custom-select" id="startHourCustom">
+                <div class="selected">Hour</div>
+                <div class="options"></div>
+            </div>
+            <span class="picker-label">hr</span>
+
+            <div class="custom-select" id="startMinuteCustom">
+                <div class="selected">Minute</div>
+                <div class="options"></div>
+            </div>
+            <span class="picker-label">min</span>
+
+            <div class="custom-select" id="startAmPmCustom">
+                <div class="selected">AM/PM</div>
+                <div class="options"></div>
+            </div>
+
+        </div>
+
+        <!-- END TIME -->
+        <label class="time-label">End Time</label>
+        <div class="time-picker">
+
+            <div class="custom-select" id="endHourCustom">
+                <div class="selected">Hour</div>
+                <div class="options"></div>
+            </div>
+            <span class="picker-label">hr</span>
+
+            <div class="custom-select" id="endMinuteCustom">
+                <div class="selected">Minute</div>
+                <div class="options"></div>
+            </div>
+            <span class="picker-label">min</span>
+
+            <div class="custom-select" id="endAmPmCustom">
+                <div class="selected">AM/PM</div>
+                <div class="options"></div>
+            </div>
+
+        </div>
+
+        <!-- Search Button -->
+        <button class="search-table">Look for Tables</button>
+
+    </div>
+    <script src="https://unpkg.com/flatpickr/dist/flatpickr.min.js"></script>
+
+    <script>
+        const datePicker = flatpickr("#myDate", {
+            minDate: "today",
+            dateFormat: "Y-m-d",
+            disableMobile: true,
+            allowInput: false,
+            clickOpens: true
+        });
+    </script>
+
+    <script src="/js/customer/future.js"></script>
+
+</body>
+</html>

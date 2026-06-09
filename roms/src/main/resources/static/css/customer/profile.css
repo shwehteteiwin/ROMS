@@ -1,0 +1,120 @@
+/* Main container */
+.profile-container {
+    z-index: 2;
+    width: 30%;
+    height: 10%;
+    max-width: 800px;
+    /* min-height: 602px; */
+    margin: auto;
+    padding: 20px 40px 35px 40px;
+    /* background: rgba(255, 255, 255, 0.15); */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+}
+.text-center h1{
+    font-size: 1.5rem;
+    color: var(--base-color--);
+}
+/* Profile image */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--profile-text-color--);
+    display: block;
+    margin: auto;
+}
+
+/* Email badge */
+.email-badge {
+    color: white;
+    background: var(--profile-text-color--);
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Menu */
+.menu {
+    margin-top: 10px;
+}
+
+.menu a {
+    margin: 0px auto;
+    border-bottom: 2px solid #fff;
+    /* width: 310px; */
+    width: 80%;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+    padding: 15px 0px 0px 0px;
+    /* border-bottom: 2px solid black; */
+    /* font-weight: 500; */
+    /* font-size: 5px; */
+}
+
+
+.menu a:hover {
+    opacity: 0.85;
+}
+/* Logout style */
+.menu a.logout {
+    /* color: rgba(255, 0, 0, 0.616);
+    border-bottom: 2px solid var(--profile-text-color--);
+    font-weight: 700px; */
+    width: 45%;
+    background: var(--profile-text-color--);
+    text-align: center;
+    border-radius: 40px;
+    color: rgb(231, 65, 65);
+    font-weight: 600;
+    /* border: 1px solid red; */
+    border-bottom: none;
+    padding: 4px;
+    justify-content: center;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+.menu a.logout i {
+    margin-left: 8px;
+}   
+
+/* Hover effect */
+.menu a.logout:hover  {
+    /* opacity: 0.85; */
+    color: white;
+    background: var(--more-green-color--);
+}
+
+/* Menu left */
+.menu-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* font-weight: bold; */
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-left i {
+    font-size: 18px;
+    color: var(--profile-text-color--);
+}
+
+/* Logout */
+/* .logout {
+    color: rgb(255, 0, 0);
+}
+
+.logout i {
+    color: var(--btn-fail-color--);
+} */

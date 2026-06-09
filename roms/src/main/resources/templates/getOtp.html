@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup - Get OTP</title>
+        <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/getOtp.css">
+    <link rel="stylesheet" href="/css/customer/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="/css/getOtp.css">
+</head>
+<body>
+
+<div class="blur-overlay" id="overlay"></div>
+        <div class="animate__animated animate__fadeIn card">
+
+            <h2 class="title">Get Otp</h2>
+            <p class="subtitle">We'll email you an OTP to Register.</p>
+
+            <!-- Email -->
+            <div class="email-box">
+                <input type="email" placeholder="Enter your email..." />
+                <button class="send-btn">Send</button>
+            </div>
+
+            <p class="timer-text">Will receive OTP within (<span>30</span>s)</p>
+
+ 
+        <div id="otpSection">
+            <p>Enter the 6-digit OTP sent to your email:</p>
+            <div class="otp-box">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+            </div>
+           <button class="check-btn">Check OTP</button>
+        </div>
+
+        <a href="/login" class="back-link">← Back to Login</a>
+
+           
+
+<script src="/js/getOtp.js"></script>
+</body>
+</html> 

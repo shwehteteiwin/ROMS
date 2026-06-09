@@ -1,0 +1,106 @@
+/* SIDEBAR */
+
+.sidebar{
+position:fixed;
+left:0;
+top:0;
+width:230px;
+height:100vh;
+border-right: 2px solid rgb(60, 160, 60);
+backdrop-filter: blur(20px);
+box-shadow: 2px 5px 5px gray;
+color:white;
+display:flex;
+flex-direction:column;
+}
+
+/* LOGO */
+
+.logo{
+padding:20px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+border-bottom:1px solid rgb(60, 160, 60);
+}
+
+/* MENU */
+
+.menu{
+display:flex;
+flex-direction:column;
+margin-top:10px;
+}
+
+/* MENU ITEM */
+
+.menu-item{
+position:relative;
+display:flex;
+align-items:center;
+gap:14px;
+padding:15px 20px;
+text-decoration:none;
+color: rgb(14, 63, 14);
+font-size:15px;
+transition:0.3s;
+}
+
+/* LEFT INDICATOR */
+
+.menu-item::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+height:100%;
+width:0;
+background: white;
+transition:0.3s;
+}
+
+/* HOVER EFFECT */
+
+.menu-item:hover{
+background:rgb(60, 160, 60);
+color:white;
+padding-left:28px;
+}
+
+.menu-item:hover::before{
+width:5px;
+}
+
+/* FOCUS EFFECT */
+
+.menu-item:focus{
+background:rgb(60, 160, 60);
+color:white;
+outline:none;
+}
+
+/* ACTIVE PAGE */
+
+.menu-item.active{
+background:rgb(60, 160, 60);
+color:white;
+}
+
+.menu-item.active::before{
+width:5px;
+}
+
+/* ICON */
+
+.menu-item i{
+width:20px;
+text-align:center;
+font-size:16px;
+}
+
+/* MAIN CONTENT */
+
+.main-content{
+margin-left:230px;
+padding:40px;
+}

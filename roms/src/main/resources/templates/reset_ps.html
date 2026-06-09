@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset Password</title>
+
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="preload" as="image" href="/images/resturant4.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/customer/reset_ps.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+
+</head>
+<body>
+
+    <div class="blur-overlay" id="overlay"></div>
+<header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <a href="/profile">Profile</a>
+        <!-- <a href="/login">Login/ Sign-up</a> -->
+        </div>
+    </nav>
+    </header>
+    <div class="animate__animated animate__fadeIn reset-container">
+        <h2>Reset Password</h2>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder="New Password...">
+            <i class="fa-regular fa-eye-slash eye-icon" data-target="password"></i>
+        </div>
+        <p class="note" id="lengthNote"></p>
+
+        <div class="input-group">
+            <input type="password" id="confirmPassword" placeholder="Confirm New Password...">
+            <i class="fa-regular fa-eye-slash eye-icon" data-target="confirmPassword"></i>
+        </div>
+
+        <button class="btn" id="resetBtn">Reset</button>
+        <a href="/login.html" class="back">← Back to Login</a>
+    </div>
+
+   <!-- Success popup -->
+  <div class="popup success" id="successPopup">
+      <span class="close-popup">&times;</span>
+     <h3>Successfully Reset Password!</h3>
+    <p>You can now use your new password to login to your account.</p>
+    <button class="btn" id="loginBtn">Login</button>
+  </div>
+
+
+    <!-- Fail Popup -->
+   <div class="popup fail" id="failPopup">
+      <span class="close-popup">&times;</span>
+      <h3>Failed Password Reset!</h3>
+    <p id="failMsg">New passwords don't match!</p>
+    <!-- <button class="btnr red" id="tryAgainBtn">Try Again</button> -->
+   </div>
+
+
+    <script src="/js/customer/reset_ps.js"></script>
+</body>
+</html>

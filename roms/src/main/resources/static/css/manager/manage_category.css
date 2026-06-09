@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+       /* overflow: hidden; */
+
+    background-image: url("/images/wooden1.jpg");
+    background-size: cover;       /* Fill entire screen */
+    background-position: center;  /* Center image */
+    background-repeat: no-repeat; /* No repeating */
+    background-attachment: fixed; 
+    overflow: hidden;/* Optional: parallax effect */
+}
+
+
+
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 60px;
+    box-sizing: border-box;
+    color: white; 
+    position: relative;
+    z-index: 2;
+}
+.header{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    /* background-color: red; */
+}
+.page-title {
+    font-size: 32px;
+    color:var(--text-main);
+}
+/* .card-container {
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-right: 10px;
+} */
+.card-container {
+    width: 100%;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding-right: 10px;
+}
+.card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(60px);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px 40px;
+    color: var(--text-main);
+    height: 60px;
+}
+.card-info {
+    width: 50%;
+    display: flex;
+    gap: 100px;
+    font-size: 15px;
+}
+/* .name{
+    width: 50%;
+    font-size: 24px;
+}
+.inv_qty{
+    width: 15%;
+} */
+ /* .name{
+    width: 200px;
+   
+}
+
+ .inv_qty{
+    width: 200px;
+}
+
+.threshold{
+    width: 200px;
+}
+
+.expiry{
+    width: 200px;
+}  */
+.btns{
+    /* width: 20%; */
+    display: flex;
+    justify-content: space-evenly;
+    /* background-color: red; */
+}
+.edit-btn, .delete-btn, .add-btn{
+    padding: 6px 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 20px;
+    height: 40px;
+    width: 80px;
+}
+.add-btn{
+    font-size: 16px;
+    font-weight: 300px;
+    width: 160px;
+    height: 45px;
+    background-color: white;
+    color: var(--text-main);
+}
+.add-btn:hover{
+    color: white;
+    background-color: var(--text-main);
+}
+.edit-btn{
+    background-color: var(--card-green);
+}
+.edit-btn:hover{
+    background-color: var(--more-green-color--);
+}
+.delete-btn{
+    background-color: #ff4d4d;
+}
+.delete-btn:hover {
+    background: #ff1a1a;
+}

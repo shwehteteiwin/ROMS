@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Category</title>
+    <link rel="preload" as="image" href="/images/wooden1.jpg">
+    <link rel="stylesheet" href="/css/manager/add_category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/staff_main.css">
+    <link rel="stylesheet" href="/css/staff_sideBar.css">
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">Manager Panel</div>
+        <div class="menu">
+            <a href="/lowStock" class="menu-item">View Low Stock</a>
+            <a href="/manageInventory" class="menu-item">Manage Inventory</a>
+            <a href="/manageCategory" class="menu-item active">Manage Category</a>
+            <a href="/manage_menus" class="menu-item">Manage Menus</a>
+            <a href="/manageTable" class="menu-item">Manage Table</a>
+            <a href="/sale_record" class="menu-item">View Sale Records</a>
+        </div>
+    </div>
+        <div class="form-card two-column-card main-content">
+                <div class="card-header">
+                    <h2>Edit Category</h2>
+                </div>
+
+                <form class="add-category-form" id="editCategoryForm">
+
+    <input type="hidden" id="category-id">
+
+    <div class="input-group">
+        <label for="category-name">Category Name</label>
+        <input type="text" id="category-name" required>
+    </div>
+
+    <div class="btns">
+        <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+        <button type="submit" class="submit-btn">Update</button>
+    </div>
+
+</form>
+        </div>
+</body>
+<script src="/js/manager/edit_category.js"></script>
+    <script src="/js/staff_sidebar.js"></script>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Profile</title>
+    <link rel="preload" as="image" href="/images/photos/resturant4.jpg">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/customer/profile.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/nav.css" />
+
+</head>
+
+<body>
+<div class="blur-overlay" id="overlay"></div>
+<header>
+    <nav class="nav">
+        <div class="logo">My Restaurant</div>
+        <div class="nav-links">
+        <a href="/dashboard">Home</a>
+        <a href="/menu">Menu</a>
+        <a href="/reservations/myReservation">My Reservation</a>
+        <a href="/cus_order_status_bills">Order Status and Bills</a>
+        <a href="/profile">Profile</a>
+        <!-- <a href="/login">Login/ Sign-up</a> -->
+        </div>
+    </nav>
+    </header>
+<div class="animate__animated animate__fadeIn profile-container">
+
+    <!-- Profile Section -->
+    <div class="text-center mt-3">
+        <img src="/images/photos/cus5.jpg" class="profile-pic" alt="Profile Picture">
+        <h1 class="mt-3 fw-bold"></h1>
+        <div class="email-badge"></div>
+    </div>
+
+    <!-- Menu Section -->
+    <div class="menu">
+        <a href="/editProfile">
+            <div class="menu-left">
+                <i class="fa-solid fa-user-pen"></i>
+                Edit Profile
+            </div>
+            <i class="fa fa-chevron-right"></i>
+        </a>
+
+        <a href="./change_password">
+            <div class="menu-left">
+                <i class="fa-solid fa-lock"></i>
+                Change Password
+            </div>
+            <i class="fa fa-chevron-right"></i>
+        </a>
+
+        <a href="#" class="logout" onclick="logout()">
+            <!-- <div class="menu-left"> -->
+                Logout
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            <!-- </div> -->
+            <!-- <i class="fa fa-chevron-right"></i> -->
+        </a>
+    </div>
+
+</div>
+<script src="/js/customer/profile.js"></script>
+
+</body>
+</html>
